@@ -4,6 +4,10 @@
     <string name="tab_text_2">Στάδιο 2</string>
     <string name="tab_text_3">Στάδιο 3</string>
     <string name="button_start">ΕΝΑΡΞΗ</string>
+    <string name="button_help">ΒΟΗΘΕΙΑ</string>
     <string name="button_quickstart">ΓΡΗΓΟΡΗ ΕΝΑΡΞΗ</string>
     <string name="text_quickstart">30 δευτ/πτα</string>
+    <string name="button_defrost">ΞΕΠΑΓΩΜΑ</string>
+    <string name="button_meal">ΦΑΓΗΤΟ</string>
+    <string name="button_drinks">ΠΟΤΟ</string>
 </resources>

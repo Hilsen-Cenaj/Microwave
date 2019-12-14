@@ -21,4 +21,67 @@
         tools:layout_constraintTop_creator="1"
         android:text="Step 2 "/>
 
+    <Button
+        android:id="@+id/button_defrost"
+        android:layout_width="190dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="164dp"
+        android:background="@drawable/roundedbutton"
+        android:gravity="center"
+        android:text="@string/button_defrost"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_meal"
+        android:layout_width="190dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="252dp"
+        android:background="@drawable/roundedbutton"
+        android:gravity="center"
+        android:text="@string/button_meal"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_drinks"
+        android:layout_width="190dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="344dp"
+        android:background="@drawable/roundedbutton"
+        android:gravity="center"
+        android:text="@string/button_drinks"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_up"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="460dp"
+        android:background="@drawable/roundedbutton"
+        android:drawable="@android:drawable/arrow_up_float"
+        android:drawingCacheQuality="auto"
+        android:duplicateParentState="false"
+        android:editable="false"
+        android:gravity="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
