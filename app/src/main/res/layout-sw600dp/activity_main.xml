@@ -27,10 +27,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
+            app:tabIndicatorColor="@color/colorAccent"
             app:tabMaxWidth="0dp"
             app:tabGravity="fill"
             app:tabMode="fixed"
-            app:tabIndicatorColor="@color/colorAccent"/>
+            />
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.view.ViewPager
@@ -39,36 +40,15 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-
-
-    <FrameLayout
-        android:id="@+id/frameLayout"
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right">
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@id/fab"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_margin"
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:scaleType="fitCenter"
-            android:src="@android:color/transparent" />
-
-    </FrameLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:elevation="16dp"
-        android:text="ΒΟΗΘΕΙΑ"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/cardview_light_background"
-        android:textSize="15dp"
-        app:layout_anchor="@+id/frameLayout"
-        app:layout_anchorGravity="center" />
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:maxImageSize="@android:dimen/app_icon_size"
+        app:srcCompat="@drawable/ic_action_name"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitCenter"/>
 </android.support.design.widget.CoordinatorLayout>
