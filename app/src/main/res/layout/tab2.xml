@@ -7,67 +7,82 @@
     android:layout_height="match_parent"
     tools:context=".Tab2">
 
-    <TextView
-        android:id="@+id/section_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintTop_creator="1"
-        android:text="Step 2 "/>
-
     <Button
         android:id="@+id/button_defrost"
-        android:layout_width="141dp"
+        android:layout_width="135dp"
         android:layout_height="42dp"
         android:layout_gravity="center_vertical|center_horizontal"
-        android:layout_marginTop="168dp"
         android:background="@drawable/roundedbutton"
         android:gravity="center"
         android:text="@string/button_defrost"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/image_defrost"
+        app:layout_constraintStart_toStartOf="@+id/image_defrost"
+        app:layout_constraintTop_toBottomOf="@+id/image_defrost" />
 
     <Button
         android:id="@+id/button_meal"
-        android:layout_width="190dp"
-        android:layout_height="70dp"
+        android:layout_width="135dp"
+        android:layout_height="42dp"
         android:layout_gravity="center_vertical|center_horizontal"
-        android:layout_marginTop="252dp"
         android:background="@drawable/roundedbutton"
         android:gravity="center"
         android:text="@string/button_meal"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/image_meal"
+        app:layout_constraintEnd_toEndOf="@+id/image_meal"
+        app:layout_constraintStart_toStartOf="@+id/image_meal"
+        app:layout_constraintTop_toBottomOf="@+id/image_meal" />
 
     <Button
         android:id="@+id/button_drinks"
-        android:layout_width="190dp"
-        android:layout_height="70dp"
+        android:layout_width="135dp"
+        android:layout_height="42dp"
         android:layout_gravity="center_vertical|center_horizontal"
-        android:layout_marginTop="344dp"
         android:background="@drawable/roundedbutton"
         android:gravity="center"
         android:text="@string/button_drinks"
         android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/image_drink"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/image_drink"
+        app:layout_constraintTop_toBottomOf="@+id/image_drink" />
+
+    <ImageView
+        android:id="@+id/image_defrost"
+        android:layout_width="86dp"
+        android:layout_height="114dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:src="@drawable/noun_defrost_8234"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/button_defrost"/>
 
+    <ImageView
+        android:id="@+id/image_drink"
+        android:layout_width="86dp"
+        android:layout_height="114dp"
+        android:src="@drawable/noun_coffee_2174251"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_meal"
+        android:contentDescription="@string/button_drinks"/>
 
-
-
+    <ImageView
+        android:id="@+id/image_meal"
+        android:layout_width="86dp"
+        android:layout_height="114dp"
+        android:src="@drawable/noun_food_1445302"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_defrost"
+        android:contentDescription="@string/button_meal"/>
 
 
 </android.support.constraint.ConstraintLayout>
