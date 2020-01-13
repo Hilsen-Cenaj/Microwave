@@ -197,7 +197,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/mins"
         app:layout_constraintEnd_toStartOf="@+id/mins" />
 
-    
+
 
 
 </android.support.constraint.ConstraintLayout>
