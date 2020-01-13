@@ -10,4 +10,8 @@
     <string name="button_defrost">ΞΕΠΑΓΩΜΑ</string>
     <string name="button_meal">ΦΑΓΗΤΟ</string>
     <string name="button_drinks">ΠΟΤΟ</string>
+    <string name="time2">:</string>
+    <string name="minutes">λεπτά</string>
+    <string name="seconds">δευτερόλεπτα</string>
+    <string name="zeros">00</string>
 </resources>

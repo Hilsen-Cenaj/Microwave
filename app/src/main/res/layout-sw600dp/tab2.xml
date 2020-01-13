@@ -5,7 +5,7 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+   
     tools:context=".Tab2">
 
     <EditText
@@ -180,40 +180,22 @@
         app:layout_constraintVertical_bias="0.002" />
 
     <ImageButton
-        android:id="@+id/button_up"
+        android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@android:drawable/arrow_up_float"
-        app:layout_constraintBottom_toTopOf="@+id/button_down"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
         app:layout_constraintEnd_toStartOf="@+id/mins"
         app:layout_constraintTop_toTopOf="@+id/mins"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
-        android:id="@+id/button_down"
+        android:id="@+id/imageButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@android:drawable/arrow_down_float"
         app:layout_constraintBottom_toBottomOf="@+id/mins"
         app:layout_constraintEnd_toStartOf="@+id/mins" />
-
-    <Button
-        android:id="@+id/back_button1"
-        android:layout_width="96dp"
-        android:layout_height="36dp"
-        android:text="Στάδιο 1"
-        android:textSize="12sp"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="613dp" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Στάδιο 3"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="245dp"
-        tools:layout_editor_absoluteY="603dp" />
 
 
 </android.support.constraint.ConstraintLayout>
