@@ -197,23 +197,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/mins"
         app:layout_constraintEnd_toStartOf="@+id/mins" />
 
-    <Button
-        android:id="@+id/back_button1"
-        android:layout_width="96dp"
-        android:layout_height="36dp"
-        android:text="Στάδιο 1"
-        android:textSize="12sp"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="613dp" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Στάδιο 3"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="245dp"
-        tools:layout_editor_absoluteY="603dp" />
+    
 
 
 </android.support.constraint.ConstraintLayout>
