@@ -14,6 +14,7 @@ import android.widget.SeekBar;
 
 public class Tab2 extends Fragment {
     Program customProgram;
+    int mins,secs;
     @Override
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
@@ -31,7 +32,7 @@ public class Tab2 extends Fragment {
         final Button button_next=root.findViewById(R.id.button_to_tab3);
         button_up.setOnClickListener(new View.OnClickListener()
         {
-            int mins,secs;
+
             public void show(){
                 String string_mins="";
                 String string_secs="";
@@ -91,7 +92,7 @@ public class Tab2 extends Fragment {
 
         button_down.setOnClickListener(new View.OnClickListener()
         {
-            int mins,secs;
+
             public void show(){
                 String string_mins="";
                 String string_secs="";
@@ -150,7 +151,9 @@ public class Tab2 extends Fragment {
         button_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //TO DO :heat and type
+                customProgram=new Program(mins,secs,2,"Defrost");
+                ((MainActivity)getActivity()).setCustomProgram(customProgram);
                 ((MainActivity)getActivity()).getViewPager().setCurrentItem(2);
             }
         });

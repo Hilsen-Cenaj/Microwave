@@ -25,8 +25,10 @@ public class Tab1 extends Fragment {
             Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.tab1, container, false);
         final SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(getContext(), getActivity().getSupportFragmentManager() );
-        final Button button = root.findViewById(R.id.button_start);
-        button.setOnClickListener(new View.OnClickListener() {
+        final Button button_start = root.findViewById(R.id.button_start);
+        //TO DO: make quick button clicked right
+        final Button button_quick=root.findViewById(R.id.button_quickstart);
+        button_start.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 ((MainActivity)getActivity()).getViewPager().setCurrentItem(1);
             }
