@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,6 +12,7 @@
     android:layout_height="match_parent"
 
     tools:context=".Tab2">
+
 
     <EditText
         android:id="@+id/secs"
@@ -17,6 +23,7 @@
         android:hint="@string/zeros"
         android:inputType="number"
         android:textSize="24sp"
+        android:maxLength="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.26"
@@ -30,7 +37,7 @@
         android:layout_width="135dp"
         android:layout_height="42dp"
         android:layout_gravity="center_vertical|center_horizontal"
-        android:background="@drawable/roundedbutton"
+        android:background="@drawable/button_radio"
         android:gravity="center"
         android:text="@string/button_defrost"
         android:textSize="24sp"
@@ -43,7 +50,7 @@
         android:layout_width="135dp"
         android:layout_height="42dp"
         android:layout_gravity="center_vertical|center_horizontal"
-        android:background="@drawable/roundedbutton"
+        android:background="@drawable/button_radio"
         android:gravity="center"
         android:text="@string/button_meal"
         android:textSize="24sp"
@@ -57,7 +64,7 @@
         android:layout_width="135dp"
         android:layout_height="42dp"
         android:layout_gravity="center_vertical|center_horizontal"
-        android:background="@drawable/roundedbutton"
+        android:background="@drawable/button_radio"
         android:gravity="center"
         android:text="@string/button_drinks"
         android:textSize="24sp"
@@ -123,6 +130,7 @@
         android:importantForAutofill="no"
         android:inputType="number"
         android:textSize="24sp"
+        android:maxLength="2"
         app:layout_constraintBottom_toBottomOf="@+id/secs"
         app:layout_constraintEnd_toStartOf="@+id/time2"
         app:layout_constraintHorizontal_bias="1.0"
@@ -197,7 +205,15 @@
         app:layout_constraintBottom_toBottomOf="@+id/mins"
         app:layout_constraintEnd_toStartOf="@+id/mins" />
 
-
+    <Button
+        android:id="@+id/button_to_tab3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to_tab3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
 
 </android.support.constraint.ConstraintLayout>
+</ScrollView>

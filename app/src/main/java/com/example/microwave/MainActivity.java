@@ -19,6 +19,7 @@ import com.example.microwave.ui.main.SectionsPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
     CustomViewPager viewPager;
+    Program customProgram;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +28,9 @@ public class MainActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabs);
+
         tabs.setupWithViewPager(viewPager);
+
 
         for (View v: tabs.getTouchables())
             v.setClickable(false);
@@ -68,5 +71,12 @@ public class MainActivity extends AppCompatActivity {
         return viewPager;
     }
 
+    public void setCustomProgram(Program p){
+        customProgram=p;
+    }
 
+
+    public Program getCustomProgram(){
+        return customProgram;
+    }
 }
