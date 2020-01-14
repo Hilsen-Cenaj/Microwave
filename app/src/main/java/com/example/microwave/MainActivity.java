@@ -73,6 +73,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void setCustomProgram(Program p){
         customProgram=p;
+        String tag = "android:switcher:" + R.id.view_pager + ":" + 2;
+        Log.e("Minutes", String.valueOf(customProgram.getType()));
+        Tab3 f = (Tab3) getSupportFragmentManager().findFragmentByTag(tag);
+        f.setProgram(customProgram);
     }
 
 
