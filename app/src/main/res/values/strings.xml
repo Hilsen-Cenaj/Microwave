@@ -14,5 +14,8 @@
     <string name="minutes">λεπτά</string>
     <string name="seconds">δευτερόλεπτα</string>
     <string name="zeros">00</string>
+    <string name="text_program_you_chose">Πρόγραμμα που επίλεξες:</string>
+    <string name="text_put_item">Παρακαλώ τοποθετήστε το αντικείμενο στον φούρνο μικροκυμάτων</string>
     <string name="to_tab3">Επόμενο Στάδιο</string>
+    <string name="to_tab2">Πίσω</string>
 </resources>

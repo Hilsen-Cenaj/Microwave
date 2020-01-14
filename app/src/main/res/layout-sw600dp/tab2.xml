@@ -1,202 +1,219 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayout"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   
-    tools:context=".Tab2">
+    android:fillViewport="true">
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
 
-    <EditText
-        android:id="@+id/secs"
-        android:layout_width="40dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="@string/zeros"
-        android:inputType="number"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.26"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_drinks"
-        app:layout_constraintVertical_bias="0.0"
-        android:importantForAutofill="no"/>
-
-    <Button
-
-        android:id="@+id/button_defrost"
-        android:layout_width="135dp"
-        android:layout_height="42dp"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:background="@drawable/button_radio"
-        android:gravity="center"
-        android:text="@string/button_defrost"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/image_defrost"
-        app:layout_constraintStart_toStartOf="@+id/image_defrost"
-        app:layout_constraintTop_toBottomOf="@+id/image_defrost" />
-
-    <Button
-        android:id="@+id/button_meal"
-        android:layout_width="135dp"
-        android:layout_height="42dp"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:background="@drawable/button_radio"
-        android:gravity="center"
-        android:text="@string/button_meal"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/image_meal"
-        app:layout_constraintEnd_toEndOf="@+id/image_meal"
-        app:layout_constraintStart_toStartOf="@+id/image_meal"
-        app:layout_constraintTop_toBottomOf="@+id/image_meal" />
-
-    <Button
-        android:id="@+id/button_drinks"
-        android:layout_width="135dp"
-        android:layout_height="42dp"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:background="@drawable/button_radio"
-        android:gravity="center"
-        android:text="@string/button_drinks"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/image_drink"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/image_drink"
-        app:layout_constraintTop_toBottomOf="@+id/image_drink" />
-
-    <ImageView
-        android:id="@+id/image_defrost"
-        android:layout_width="86dp"
-        android:layout_height="114dp"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:src="@drawable/noun_defrost_8234"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/button_defrost"/>
-
-    <ImageView
-        android:id="@+id/image_drink"
-        android:layout_width="86dp"
-        android:layout_height="114dp"
-        android:src="@drawable/noun_coffee_2174251"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_meal"
-        android:contentDescription="@string/button_drinks"/>
-
-    <ImageView
-        android:id="@+id/image_meal"
-        android:layout_width="86dp"
-        android:layout_height="114dp"
-        android:src="@drawable/noun_food_1445302"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_defrost"
-        android:contentDescription="@string/button_meal"/>
-
-    <TextView
-        android:id="@+id/time2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/time2"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/secs"
-        app:layout_constraintEnd_toEndOf="@+id/mins"
-        app:layout_constraintEnd_toStartOf="@+id/secs"
-        app:layout_constraintTop_toTopOf="@+id/secs" />
-
-    <EditText
-        android:id="@+id/mins"
-        android:layout_width="40dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="@string/zeros"
-        android:importantForAutofill="no"
-        android:inputType="number"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/secs"
-        app:layout_constraintEnd_toStartOf="@+id/time2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/secs"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/minutes_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/minutes"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="@+id/seconds_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/mins"
-        app:layout_constraintTop_toBottomOf="@+id/mins"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/seconds_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginLeft="6dp"
-        android:text="@string/seconds"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/secs"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/minutes_text"
-        app:layout_constraintTop_toBottomOf="@+id/secs"
-        app:layout_constraintVertical_bias="0.002" />
-
-    <SeekBar
-        android:id="@+id/seekBar"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="180dp"
-        android:layout_height="58dp"
-        android:max="2"
-
-        android:progress="3"
-        android:scaleX="1"
-        android:scaleY="1"
-        android:thumbOffset="6dp"
-        android:progressBackgroundTint="@color/colorAccent"
-        android:progressTint="@color/colorPrimary"
-        android:thumb="@drawable/ic_fire"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.204"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/minutes_text"
-        app:layout_constraintVertical_bias="0.002" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@android:drawable/arrow_up_float"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
-        app:layout_constraintEnd_toStartOf="@+id/mins"
-        app:layout_constraintTop_toTopOf="@+id/mins"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@android:drawable/arrow_down_float"
-        app:layout_constraintBottom_toBottomOf="@+id/mins"
-        app:layout_constraintEnd_toStartOf="@+id/mins" />
+        tools:context=".Tab2">
 
 
-</android.support.constraint.ConstraintLayout>
+        <EditText
+            android:id="@+id/secs"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/zeros"
+            android:inputType="number"
+            android:textSize="24sp"
+            android:maxLength="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.26"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_drinks"
+            app:layout_constraintVertical_bias="0.0"
+            android:importantForAutofill="no"/>
+
+        <Button
+            android:id="@+id/button_defrost"
+            android:layout_width="135dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:background="@drawable/button_radio"
+            android:gravity="center"
+            android:text="@string/button_defrost"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/image_defrost"
+            app:layout_constraintStart_toStartOf="@+id/image_defrost"
+            app:layout_constraintTop_toBottomOf="@+id/image_defrost" />
+
+        <Button
+            android:id="@+id/button_meal"
+            android:layout_width="135dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:background="@drawable/button_radio"
+            android:gravity="center"
+            android:text="@string/button_meal"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/image_meal"
+            app:layout_constraintEnd_toEndOf="@+id/image_meal"
+            app:layout_constraintStart_toStartOf="@+id/image_meal"
+            app:layout_constraintTop_toBottomOf="@+id/image_meal" />
+
+        <Button
+            android:id="@+id/button_drinks"
+            android:layout_width="135dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:background="@drawable/button_radio"
+            android:gravity="center"
+            android:text="@string/button_drinks"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/image_drink"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="@+id/image_drink"
+            app:layout_constraintTop_toBottomOf="@+id/image_drink" />
+
+        <ImageView
+            android:id="@+id/image_defrost"
+            android:layout_width="86dp"
+            android:layout_height="114dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:src="@drawable/noun_defrost_8234"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.486"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/button_defrost"/>
+
+        <ImageView
+            android:id="@+id/image_drink"
+            android:layout_width="86dp"
+            android:layout_height="114dp"
+            android:src="@drawable/noun_coffee_2174251"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_meal"
+            android:contentDescription="@string/button_drinks"/>
+
+        <ImageView
+            android:id="@+id/image_meal"
+            android:layout_width="86dp"
+            android:layout_height="114dp"
+            android:src="@drawable/noun_food_1445302"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.486"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_defrost"
+            android:contentDescription="@string/button_meal"/>
+
+        <TextView
+            android:id="@+id/time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time2"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/secs"
+            app:layout_constraintEnd_toEndOf="@+id/mins"
+            app:layout_constraintEnd_toStartOf="@+id/secs"
+            app:layout_constraintTop_toTopOf="@+id/secs" />
+
+        <EditText
+            android:id="@+id/mins"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/zeros"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:textSize="24sp"
+            android:maxLength="2"
+            app:layout_constraintBottom_toBottomOf="@+id/secs"
+            app:layout_constraintEnd_toStartOf="@+id/time2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/secs"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/minutes_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minutes"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/seconds_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/mins"
+            app:layout_constraintTop_toBottomOf="@+id/mins"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/seconds_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:text="@string/seconds"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/secs"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/minutes_text"
+            app:layout_constraintTop_toBottomOf="@+id/secs"
+            app:layout_constraintVertical_bias="0.002" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="180dp"
+            android:layout_height="58dp"
+            android:max="2"
+
+            android:progress="3"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:thumbOffset="6dp"
+            android:progressBackgroundTint="@color/colorAccent"
+            android:progressTint="@color/colorPrimary"
+            android:thumb="@drawable/ic_fire"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.204"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/minutes_text"
+            app:layout_constraintVertical_bias="0.002" />
+
+        <ImageButton
+            android:id="@+id/button_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/arrow_up_float"
+            app:layout_constraintBottom_toTopOf="@+id/button_down"
+            app:layout_constraintEnd_toStartOf="@+id/mins"
+            app:layout_constraintTop_toTopOf="@+id/mins"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/button_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/arrow_down_float"
+            app:layout_constraintBottom_toBottomOf="@+id/mins"
+            app:layout_constraintEnd_toStartOf="@+id/mins" />
+
+        <Button
+            android:id="@+id/button_to_tab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to_tab3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
