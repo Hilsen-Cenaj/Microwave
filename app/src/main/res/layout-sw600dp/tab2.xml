@@ -16,21 +16,21 @@
 
         <EditText
             android:id="@+id/secs"
-            android:layout_width="40dp"
-            android:layout_height="50dp"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
             android:ems="10"
             android:gravity="center"
             android:hint="@string/zeros"
+            android:importantForAutofill="no"
             android:inputType="number"
-            android:textSize="24sp"
             android:maxLength="2"
+            android:textSize="29sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.26"
+            app:layout_constraintHorizontal_bias="0.614"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button_drinks"
-            app:layout_constraintVertical_bias="0.0"
-            android:importantForAutofill="no"/>
+            app:layout_constraintVertical_bias="0.12" />
 
         <Button
             android:id="@+id/button_defrost"
@@ -122,15 +122,15 @@
 
         <EditText
             android:id="@+id/mins"
-            android:layout_width="40dp"
-            android:layout_height="50dp"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
             android:ems="10"
             android:gravity="center"
             android:hint="@string/zeros"
             android:importantForAutofill="no"
             android:inputType="number"
-            android:textSize="24sp"
             android:maxLength="2"
+            android:textSize="29sp"
             app:layout_constraintBottom_toBottomOf="@+id/secs"
             app:layout_constraintEnd_toStartOf="@+id/time2"
             app:layout_constraintHorizontal_bias="1.0"
@@ -140,10 +140,11 @@
 
         <TextView
             android:id="@+id/minutes_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="112dp"
+            android:layout_height="39dp"
             android:text="@string/minutes"
             android:textColor="#000000"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="@+id/seconds_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -153,44 +154,45 @@
 
         <TextView
             android:id="@+id/seconds_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="173dp"
+            android:layout_height="39dp"
             android:layout_marginStart="6dp"
             android:layout_marginLeft="6dp"
             android:text="@string/seconds"
             android:textColor="#000000"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/secs"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.229"
             app:layout_constraintStart_toEndOf="@+id/minutes_text"
             app:layout_constraintTop_toBottomOf="@+id/secs"
-            app:layout_constraintVertical_bias="0.002" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <SeekBar
             android:id="@+id/seekBar"
             style="@style/Widget.AppCompat.SeekBar.Discrete"
-            android:layout_width="180dp"
-            android:layout_height="58dp"
+            android:layout_width="317dp"
+            android:layout_height="84dp"
             android:max="2"
 
             android:progress="3"
+            android:progressBackgroundTint="@color/colorPrimaryDark"
+            android:progressTint="@color/colorPrimary"
             android:scaleX="1"
             android:scaleY="1"
-            android:thumbOffset="6dp"
-            android:progressBackgroundTint="@color/colorAccent"
-            android:progressTint="@color/colorPrimary"
             android:thumb="@drawable/ic_fire"
+            android:thumbOffset="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.204"
+            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/minutes_text"
-            app:layout_constraintVertical_bias="0.002" />
+            app:layout_constraintVertical_bias="0.164" />
 
         <ImageButton
             android:id="@+id/button_up"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
             android:src="@android:drawable/arrow_up_float"
             app:layout_constraintBottom_toTopOf="@+id/button_down"
             app:layout_constraintEnd_toStartOf="@+id/mins"
@@ -199,8 +201,8 @@
 
         <ImageButton
             android:id="@+id/button_down"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
             android:src="@android:drawable/arrow_down_float"
             app:layout_constraintBottom_toBottomOf="@+id/mins"
             app:layout_constraintEnd_toStartOf="@+id/mins" />

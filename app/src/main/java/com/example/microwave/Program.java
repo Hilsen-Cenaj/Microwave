@@ -1,15 +1,19 @@
 package com.example.microwave;
 
 public class Program {
-    private int minutes,seconds,heat;
-    private String type;
-    public Program(int minutes, int seconds, int heat, String type) {
+    private int minutes,seconds;
+    private String type,heat;
+    public Program(int minutes, int seconds,String heat, String type) {
         this.minutes = minutes;
         this.seconds = seconds;
         this.heat = heat;
         this.type = type;
     }
-    public Program(){}
+
+    public Program() {
+
+    }
+
     public int getMinutes() {
         return minutes;
     }
@@ -26,11 +30,11 @@ public class Program {
         this.seconds = seconds;
     }
 
-    public int getHeat() {
+    public String getHeat() {
         return heat;
     }
 
-    public void setHeat(int heat) {
+    public void setHeat(String heat) {
         this.heat = heat;
     }
 

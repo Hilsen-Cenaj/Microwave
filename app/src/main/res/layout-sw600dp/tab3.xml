@@ -14,7 +14,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="29dp">
+        tools:layout_editor_absoluteX="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,19 +30,19 @@
         android:layout_marginLeft="4dp"
         android:layout_marginTop="28dp"
         android:text="@string/text_program_you_chose"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/Chosen_Program"
-        android:layout_width="216dp"
-        android:layout_height="47dp"
+        android:layout_width="249dp"
+        android:layout_height="116dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="TextView"
-        android:textSize="18sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,8 +50,8 @@
 
     <TextView
         android:id="@+id/Chosen_Time"
-        android:layout_width="224dp"
-        android:layout_height="63dp"
+        android:layout_width="256dp"
+        android:layout_height="120dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="80dp"
@@ -59,7 +59,7 @@
         android:layout_marginRight="8dp"
         android:gravity="center"
         android:text="TextView"
-        android:textSize="18sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,8 +67,8 @@
 
     <TextView
         android:id="@+id/Chosen_Temp"
-        android:layout_width="218dp"
-        android:layout_height="53dp"
+        android:layout_width="256dp"
+        android:layout_height="124dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
@@ -76,7 +76,7 @@
         android:layout_marginRight="8dp"
         android:gravity="center"
         android:text="TextView"
-        android:textSize="18sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,8 +84,8 @@
 
     <TextView
         android:id="@+id/text_put_item"
-        android:layout_width="269dp"
-        android:layout_height="95dp"
+        android:layout_width="415dp"
+        android:layout_height="146dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="16dp"
@@ -93,7 +93,7 @@
         android:gravity="center"
 
         android:text="@string/text_put_item"
-        android:textSize="18sp"
+        android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button_final_start"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,8 +103,8 @@
 
     <Button
         android:id="@+id/button_final_start"
-        android:layout_width="155dp"
-        android:layout_height="73dp"
+        android:layout_width="247dp"
+        android:layout_height="121dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
@@ -113,7 +113,7 @@
         android:background="@drawable/roundedbutton"
         android:gravity="center"
         android:text="@string/button_start"
-        android:textSize="24sp"
+        android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -121,16 +121,17 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:textSize="24sp"
         android:id="@+id/button_to_tab2"
-        android:layout_width="139dp"
-        android:layout_height="68dp"
+        android:layout_width="185dp"
+        android:layout_height="85dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginBottom="8dp"
         android:background="@color/colorPrimary"
+
         android:text="@string/to_tab2"
         android:textColor="@android:color/background_light"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
         app:layout_constraintStart_toStartOf="@+id/scrollView2" />
 
