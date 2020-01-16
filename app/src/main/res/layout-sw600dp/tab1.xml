@@ -16,10 +16,10 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/button_start"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintHorizontal_bias="0.22"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.551"
+        app:layout_constraintVertical_bias="0.399"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
 
@@ -34,9 +34,10 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/button_quickstart"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.535" />
+        app:layout_constraintVertical_bias="0.649" />
 
     <Button
         android:id="@+id/button_quickstart"
@@ -63,5 +64,42 @@
         app:layout_constraintHorizontal_bias="0.575"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_quickstart" />
+
+    <ImageButton
+        android:id="@+id/button_speaker"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:src="@drawable/ic_audio"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/section_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/section_label" />
+
+    <ImageButton
+        android:id="@+id/button_speech"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:layout_marginTop="32dp"
+
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="20dp"
+
+        android:backgroundTint="@color/colorPrimaryDark"
+
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_mic"
+        app:layout_constraintBottom_toTopOf="@+id/button_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.983"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_speaker"
+        app:layout_constraintVertical_bias="0.09" />
 
 </android.support.constraint.ConstraintLayout>

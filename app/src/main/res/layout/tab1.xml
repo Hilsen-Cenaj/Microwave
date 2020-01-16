@@ -11,8 +11,8 @@
         android:id="@+id/section_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/text_tab1"
         android:layout_gravity="center_vertical|center_horizontal"
+        android:text="@string/text_tab1"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/button_start"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.535" />
+        app:layout_constraintVertical_bias="0.637" />
 
     <Button
         android:id="@+id/button_quickstart"
@@ -62,5 +62,52 @@
         app:layout_constraintHorizontal_bias="0.575"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_quickstart" />
+
+    <ImageButton
+        android:id="@+id/button_speaker"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+
+
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:src="@drawable/ic_audio"
+
+        app:layout_constraintBottom_toBottomOf="@+id/section_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/section_label" />
+
+    <ImageButton
+        android:id="@+id/button_speech"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+
+        android:layout_marginTop="32dp"
+
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+
+
+        android:layout_marginBottom="20dp"
+
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:src="@drawable/ic_mic"
+        app:layout_constraintBottom_toTopOf="@+id/button_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_speaker"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/text_speech"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_speech" />
 
 </android.support.constraint.ConstraintLayout>

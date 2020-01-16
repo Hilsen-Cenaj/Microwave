@@ -259,5 +259,43 @@
         app:layout_constraintTop_toBottomOf="@+id/seconds_text"
         app:layout_constraintVertical_bias="1.0" />
 
+    <ImageButton
+        android:id="@+id/button_speaker"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+
+
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+
+        android:src="@drawable/ic_audio"
+        app:layout_constraintBottom_toBottomOf="@+id/section_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.82"
+        app:layout_constraintStart_toEndOf="@+id/image_defrost"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/button_speech"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+
+        android:layout_marginTop="32dp"
+
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+
+
+        android:layout_marginBottom="20dp"
+
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:src="@drawable/ic_mic"
+        app:layout_constraintBottom_toTopOf="@+id/button_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button_defrost"
+        app:layout_constraintTop_toBottomOf="@+id/button_speaker"
+        app:layout_constraintVertical_bias="1.0" />
+
 </android.support.constraint.ConstraintLayout>
 </ScrollView>
