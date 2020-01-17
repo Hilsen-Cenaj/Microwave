@@ -83,22 +83,16 @@
         android:layout_width="78dp"
         android:layout_height="78dp"
 
-        android:layout_marginTop="32dp"
-
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
 
-
-        android:layout_marginBottom="20dp"
 
         android:backgroundTint="@color/colorPrimaryDark"
         android:src="@drawable/ic_mic"
         app:layout_constraintBottom_toTopOf="@+id/button_start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_speaker"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toEndOf="@+id/text_speech" />
 
     <TextView
         android:id="@+id/text_speech"

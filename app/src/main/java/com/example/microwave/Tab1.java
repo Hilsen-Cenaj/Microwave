@@ -35,7 +35,7 @@ import java.util.Locale;
 import static android.app.Activity.RESULT_OK;
 
 public class Tab1 extends Fragment {
-    private final int REQ_CODE = 100;
+    private final int REQ_CODE = 5;
     Program customProgram;
     ImageButton button_speech;
     Button button_quick,button_start ;
@@ -77,8 +77,9 @@ public class Tab1 extends Fragment {
         button_speaker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String data = "Για επιλογή προγράμματος πείτε έναρξη,για γρήγορο ζέσταμα 30 δευτερολέπτων πείτε γρήγορη έναρξη";
+                String data = "Για επιλογή προγράμματος πείτε έναρξη,για γρήγορο ζέσταμα 30 δευτερολέπτων πείτε γρήγορη έναρξη αφού πατήσετε το  κουμπί του μικροφώνου";
                 Log.i("TTS", "button clicked: " + data);
+
                 textToSpeech.setSpeechRate(0.90f);
                 int speechStatus = textToSpeech.speak(data, TextToSpeech.QUEUE_FLUSH, null);
 
@@ -90,12 +91,14 @@ public class Tab1 extends Fragment {
         });
 
         button_speech.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
                 intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
                         RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+                intent.putExtra(RecognizerIntent.EXTRA_ONLY_RETURN_LANGUAGE_PREFERENCE,Locale.forLanguageTag("el-GR").getDefault());
+                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.forLanguageTag("el-GR").getDefault());
                 intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Need to speak");
                 try {
                     startActivityForResult(intent, REQ_CODE);
@@ -145,13 +148,16 @@ public class Tab1 extends Fragment {
             case REQ_CODE: {
                 if (resultCode == RESULT_OK && null != data) {
                     ArrayList result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-                    text_speech.setText((CharSequence) result.get(0));
-                    Log.e("Debug", String.valueOf(result.get(0)));
+
+
                     String data1=String.valueOf(result.get(0));
                     if(data1.equalsIgnoreCase("έναρξη")){
                         button_start.performClick();
                     }else if (data1.equalsIgnoreCase("Γρήγορη έναρξη")||data1.equalsIgnoreCase("Γρηγόρη έναρξη")){
                         button_quick.performClick();
+                    }else {
+
+                        Toast.makeText(getContext(), "Παρακαλώ επαναλάβετε", Toast.LENGTH_LONG).show();
                     }
                 }
                 break;

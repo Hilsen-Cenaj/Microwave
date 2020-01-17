@@ -69,11 +69,11 @@
         android:id="@+id/button_speaker"
         android:layout_width="100dp"
         android:layout_height="100dp"
-
+        android:scaleType="fitXY"
 
         android:backgroundTint="@color/colorPrimaryDark"
         android:src="@drawable/ic_audio"
-        android:scaleType="fitXY"
+
         app:layout_constraintBottom_toBottomOf="@+id/section_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.951"

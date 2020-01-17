@@ -3,6 +3,7 @@ package com.example.microwave;
 import android.app.Fragment;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -51,7 +52,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder1 = new AlertDialog.Builder(view.getContext());
-                builder1.setMessage("Write your message here.");
+                Resources res = view.getContext().getResources();
+
+                builder1.setMessage(res.getIdentifier("help", "string", view.getContext().getPackageName()));
                 builder1.setCancelable(true);
 
                 builder1.setNeutralButton(

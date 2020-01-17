@@ -13,8 +13,8 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="29dp">
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="-1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,9 +29,11 @@
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
         android:layout_marginTop="28dp"
+        android:paddingLeft="10dp"
         android:text="@string/text_program_you_chose"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/Chosen_Time"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -90,10 +92,12 @@
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:gravity="center"
 
+        android:gravity="center"
         android:text="@string/text_put_item"
         android:textSize="18sp"
+
+
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button_final_start"
         app:layout_constraintEnd_toEndOf="parent"
@@ -109,30 +113,30 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="116dp"
         android:background="@drawable/roundedbutton"
         android:gravity="center"
         android:text="@string/button_start"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_to_tab2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:textSize="24sp"
         android:id="@+id/button_to_tab2"
-        android:layout_width="139dp"
-        android:layout_height="68dp"
+        android:layout_width="118dp"
+        android:layout_height="55dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginBottom="8dp"
         android:background="@color/colorPrimary"
         android:text="@string/to_tab2"
         android:textColor="@android:color/background_light"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
         app:layout_constraintStart_toStartOf="@+id/scrollView2" />
+
     <ImageButton
         android:id="@+id/button_speaker"
         android:layout_width="78dp"
@@ -142,11 +146,11 @@
         android:backgroundTint="@color/colorPrimaryDark"
         android:src="@drawable/ic_audio"
 
-        app:layout_constraintBottom_toBottomOf="@+id/section_label"
+        app:layout_constraintBottom_toBottomOf="@+id/Chosen_Time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.951"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/text_program" />
+        app:layout_constraintStart_toEndOf="@+id/text_program"
+        app:layout_constraintTop_toTopOf="@+id/Chosen_Time" />
 
     <ImageButton
         android:id="@+id/button_speech"
@@ -155,19 +159,14 @@
 
         android:layout_marginTop="32dp"
 
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-
-
-        android:layout_marginBottom="20dp"
 
         android:backgroundTint="@color/colorPrimaryDark"
         android:src="@drawable/ic_mic"
-        app:layout_constraintBottom_toTopOf="@+id/button_start"
+        app:layout_constraintBottom_toTopOf="@+id/Chosen_Temp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_speaker"
+        app:layout_constraintStart_toEndOf="@+id/Chosen_Program"
+        app:layout_constraintTop_toTopOf="@+id/Chosen_Program"
         app:layout_constraintVertical_bias="1.0" />
 
 
