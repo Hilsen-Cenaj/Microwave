@@ -31,7 +31,7 @@ public class Tab2 extends Fragment {
     private final int REQ_CODE = 7;
     Program customProgram;
     ImageButton button_speech;
-    Button button_next;
+    Button button_next,back_button;
     EditText minutes,seconds;
     private TextToSpeech textToSpeech;
     int mins=0,secs=0;
@@ -50,7 +50,7 @@ public class Tab2 extends Fragment {
         final ImageButton button_up=root.findViewById(R.id.button_up);
         final ImageButton button_down=root.findViewById(R.id.button_down);
         minutes= root.findViewById(R.id.mins);
-        final Button back_button=root.findViewById(R.id.button_to_tab1);
+         back_button=root.findViewById(R.id.button_to_tab1);
         minutes.setText("01");
         seconds= root.findViewById(R.id.secs);
         seconds.setText(("00"));
@@ -103,6 +103,7 @@ public class Tab2 extends Fragment {
                 intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
                         RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
                 intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.forLanguageTag("el-GR").getDefault());
+                intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 10);
                 intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Need to speak");
                 try {
                     startActivityForResult(intent, REQ_CODE);
@@ -350,36 +351,37 @@ public class Tab2 extends Fragment {
             if (com[0].equalsIgnoreCase("φαγητό") ||
                     com[0].equalsIgnoreCase("ποτό") ||
                     com[0].equalsIgnoreCase("ξεπάγωμα")) {
-                if (com[1].equalsIgnoreCase("για")) {
 
-                    if (isInteger(com[2]) && (com[3].equalsIgnoreCase("λεπτά")||com[3].equalsIgnoreCase("λεπτό"))) {
-                        if(com[2].equalsIgnoreCase("ένα")) mins=1;
-                         else   mins = Integer.parseInt(com[2]);
+
+                    if (isInteger(com[1]) && (com[2].equalsIgnoreCase("λεπτά")||com[2].equalsIgnoreCase("λεπτό"))) {
+                        if(com[1].equalsIgnoreCase("ένα")) mins=1;
+                         else   mins = Integer.parseInt(com[1]);
                         minutes.setText(String.valueOf(mins));
-                    } else if (isInteger(com[2]) && (com[3].equalsIgnoreCase("δευτερόλεπτα")||com[3].equalsIgnoreCase("δευτερόλεπτο"))) {
+                        secs=0;
+                        seconds.setText(String.valueOf(secs));
+                    } else if (isInteger(com[1]) && (com[2].equalsIgnoreCase("δευτερόλεπτα")||com[2].equalsIgnoreCase("δευτερόλεπτο"))) {
                         if(com[2].equalsIgnoreCase("ένα")) secs=1;
-                        else   secs = Integer.parseInt(com[2]);
+                        else   secs = Integer.parseInt(com[1]);
 
                         minutes.setText(String.valueOf(0));
                         seconds.setText(String.valueOf(secs));
                     } else
                         return false;
-                    if (com.length >= 7) {
-                        if(com[4].equalsIgnoreCase("και")) {
-                            if (isInteger(com[5]) &&( com[6].equalsIgnoreCase("δευτερόλεπτα")||com[6].equalsIgnoreCase("δευτερόλεπτο"))) {
-                                if(com[5].equalsIgnoreCase("ένα"))secs=1;
-                                else   secs = Integer.parseInt(com[5]);
-
+                    if (com.length >= 5) {
+                        if(com[3].equalsIgnoreCase("και")) {
+                            if (isInteger(com[4]) &&( com[5].equalsIgnoreCase("δευτερόλεπτα")||com[5].equalsIgnoreCase("δευτερόλεπτο"))) {
+                                if(com[4].equalsIgnoreCase("ένα"))secs=1;
+                                else   secs = Integer.parseInt(com[4]);
+                                Log.e("secs", String.valueOf(secs));
                                 seconds.setText(String.valueOf(secs));
                                 return true;
                             } else return false;
                         }
                     } else {
+
                         return true;
                     }
-                } else {
-                    return false;
-                }
+
             }
         }
         return false;
@@ -409,7 +411,11 @@ public class Tab2 extends Fragment {
                     Log.e("Debug", String.valueOf(result.get(0)));
                     String data1=String.valueOf(result.get(0));
                     String [] splitdata=data1.split(" ");
-                    if(checkVoiceCommands(splitdata)){
+                    if(data1.equalsIgnoreCase("πίσω")) {
+                        back_button.performClick();
+
+                    }
+                    else if(checkVoiceCommands(splitdata)){
                         type=splitdata[0];
                         button_next.performClick();
                     }else{

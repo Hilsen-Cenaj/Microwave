@@ -99,6 +99,7 @@ public class Tab1 extends Fragment {
                         RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
                 intent.putExtra(RecognizerIntent.EXTRA_ONLY_RETURN_LANGUAGE_PREFERENCE,Locale.forLanguageTag("el-GR").getDefault());
                 intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.forLanguageTag("el-GR").getDefault());
+                intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 10);
                 intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Need to speak");
                 try {
                     startActivityForResult(intent, REQ_CODE);
