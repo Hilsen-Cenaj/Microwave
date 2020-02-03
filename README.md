@@ -4,5 +4,5 @@
 ##### The app is splitted into _3 stages_. Each stage has a button for instructions that can be heard and a microphone button that user can use it according to the instructions.1st stage is the first screen that user can see and via buttons can continue to next stages. In 2nd stage, user can select the preferable program and edit this.The 3rd stage is a review of what user has selected and completing the process.
 #### We have uploaded a [YouTube video](https://www.youtube.com/watch?v=llFdg9k4hkk) in which there are instructions how to use the application
 
-###### There is also a PDF file with instructions in _greek_ named _report.pdf_ .
+###### There is also a PDF file with instructions in _greek_ named [_report.pdf_](https://github.com/fwteinhpap/Microwave/blob/master/Report.pdf) .
 
